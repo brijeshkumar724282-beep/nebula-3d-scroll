@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nebula Scroll | Immersive Scroll Journey</title>
+<meta name="description" content="Nebula Scroll is an immersive scroll journey through launch orbit and landing with a live starfield.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas>
+<div class="bgveil" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top" data-scroll>
+    <span class="brandmark" aria-hidden="true"></span>
+    <span class="brandtext">Nebula Scroll</span>
+  </a>
+  <nav class="links" id="navlinks" aria-label="Primary">
+    <a href="#launch" data-scroll>Launch</a>
+    <a href="#orbit" data-scroll>Orbit</a>
+    <a href="#landing" data-scroll>Landing</a>
+    <a href="#gallery" data-scroll>Gallery</a>
+    <a href="#contact" data-scroll class="pill">Contact</a>
+  </nav>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<aside class="dots" aria-label="Chapter progress">
+  <a href="#launch" data-scroll data-dot="launch" aria-label="Go to Launch"><i></i><em>Launch</em></a>
+  <a href="#orbit" data-scroll data-dot="orbit" aria-label="Go to Orbit"><i></i><em>Orbit</em></a>
+  <a href="#landing" data-scroll data-dot="landing" aria-label="Go to Landing"><i></i><em>Landing</em></a>
+  <a href="#gallery" data-scroll data-dot="gallery" aria-label="Go to Gallery"><i></i><em>Gallery</em></a>
+</aside>
+
+<main id="top">
+  <section class="hero">
+    <p class="eyebrow heroanim">Immersive Scroll Journey</p>
+    <h1 class="heroanim">Travel the Nebula in Three Chapters</h1>
+    <p class="lede heroanim">A cinematic scroll experience with a live starfield that reacts to your speed through space. Move slow to drift. Move fast to warp.</p>
+    <div class="ctarow heroanim">
+      <a href="#launch" data-scroll class="btn solid">Begin the Journey</a>
+      <a href="#gallery" data-scroll class="btn ghost">View Gallery</a>
+    </div>
+    <div class="cue heroanim" aria-hidden="true">
+      <span class="cuetext">Scroll to explore</span>
+      <span class="track"><span class="wheel"></span></span>
+    </div>
+    <div class="herocards heroanim">
+      <div class="hcard"><strong id="fpsLabel">60</strong><span>Frames each second</span></div>
+      <div class="hcard"><strong>2.4k</strong><span>Stars in view</span></div>
+      <div class="hcard"><strong>03</strong><span>Chapters to fly</span></div>
+    </div>
+  </section>
+
+  <section class="chapter" id="launch">
+    <div class="chapterinner">
+      <div class="copy">
+        <p class="chnum">Chapter 01</p>
+        <h2>Launch</h2>
+        <p>Ignition lights the sky as your craft leaves the pad and climbs past the clouds into open space. Feel the push as the starfield wakes up around you.</p>
+        <ul class="ticks">
+          <li>Engine glow in solid coral</li>
+          <li>Camera rises with scroll</li>
+          <li>Stars stretch as you accelerate</li>
+        </ul>
+      </div>
+      <div class="card coral">
+        <p class="cardkicker">Lift Off</p>
+        <h3>Power at Full</h3>
+        <p>Engines at full power. Stars appear as the sky turns to deep navy and the ground falls away.</p>
+        <div class="cardrow"><span>Speed</span><strong>High</strong></div>
+        <div class="meter"><i style="width:82%"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter" id="orbit">
+    <div class="chapterinner">
+      <div class="copy">
+        <p class="chnum">Chapter 02</p>
+        <h2>Orbit</h2>
+        <p>Weightless drift among constellations while Earth glows below and time slows to a calm float. This is the quiet heart of the voyage.</p>
+        <ul class="ticks">
+          <li>Slow drift and soft rotation</li>
+          <li>Shapes float in calm loops</li>
+          <li>Best viewed with slow scroll</li>
+        </ul>
+      </div>
+      <div class="card navy">
+        <p class="cardkicker">Zero Gravity</p>
+        <h3>Calm Float</h3>
+        <p>Scroll gently here. The scene breathes with you and the shapes turn in slow circles.</p>
+        <div class="cardrow"><span>Speed</span><strong>Low</strong></div>
+        <div class="meter"><i style="width:28%"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter" id="landing">
+    <div class="chapterinner">
+      <div class="copy">
+        <p class="chnum">Chapter 03</p>
+        <h2>Landing</h2>
+        <p>Descent through glowing dust toward a quiet plain where the journey rests and new light rises. Touch down soft and look back at the stars.</p>
+        <ul class="ticks">
+          <li>Dust glows in warm tones</li>
+          <li>Descent eases to stillness</li>
+          <li>Stars settle overhead</li>
+        </ul>
+      </div>
+      <div class="card light">
+        <p class="cardkicker">Touch Down</p>
+        <h3>Soft Arrival</h3>
+        <p>Dust clears. Light holds steady. Your path across the nebula is now complete.</p>
+        <div class="cardrow"><span>Speed</span><strong>Settled</strong></div>
+        <div class="meter dark"><i style="width:12%"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallerywrap" id="gallery">
+    <div class="sechead">
+      <p class="eyebrow">Gallery</p>
+      <h2>Postcards From the Voyage</h2>
+      <p class="sub">Six stills gathered along the route. Hover to tilt each card in space.</p>
+    </div>
+    <div class="grid">
+      <article class="art tilt"><div class="swatch s1" aria-hidden="true"><i></i></div><h3>Ember Cluster</h3><p>A dense knot of young stars burning in coral light.</p></article>
+      <article class="art tilt"><div class="swatch s2" aria-hidden="true"><i></i></div><h3>Silent Orbit</h3><p>A lone craft crossing a sea of faint white dust.</p></article>
+      <article class="art tilt"><div class="swatch s3" aria-hidden="true"><i></i></div><h3>Coral Dawn</h3><p>First light spilling across the edge of night.</p></article>
+      <article class="art tilt"><div class="swatch s4" aria-hidden="true"><i></i></div><h3>Deep Field</h3><p>Thousands of points glowing in deep navy dark.</p></article>
+      <article class="art tilt"><div class="swatch s5" aria-hidden="true"><i></i></div><h3>Star Harbor</h3><p>A calm bay where light gathers before departure.</p></article>
+      <article class="art tilt"><div class="swatch s6" aria-hidden="true"><i></i></div><h3>Night Bloom</h3><p>A slow flower of gas opening in the void.</p></article>
+    </div>
+    <div class="stats">
+      <div><strong data-count="2400">2400</strong><span>Stars rendered</span></div>
+      <div><strong data-count="3">3</strong><span>Chapters pinned</span></div>
+      <div><strong data-count="6">6</strong><span>Art cards</span></div>
+      <div><strong data-count="100">100</strong><span>Percent static</span></div>
+    </div>
+  </section>
+
+  <section class="contactwrap" id="contact">
+    <div class="formcard">
+      <p class="eyebrow">Contact</p>
+      <h2>Say Hello</h2>
+      <p class="sub">Tell us where you want to go next in the nebula. We reply within two days.</p>
+      <form id="contactform" novalidate>
+        <label>Name<input type="text" id="fname" name="name" placeholder="Ada Nova" autocomplete="name"><small data-err="fname"></small></label>
+        <label>Email<input type="email" id="femail" name="email" placeholder="ada@stars.space" autocomplete="email"><small data-err="femail"></small></label>
+        <label>Message<textarea id="fmsg" name="message" rows="4" placeholder="I want a chapter about ocean moons..."></textarea><small data-err="fmsg"></small></label>
+        <button type="submit" class="btn solid full">Send Message</button>
+        <p class="formok" id="formok" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div>
+      <strong>Nebula Scroll</strong>
+      <p>Built as a static site for the open web. Sora type plus Three scenes.</p>
+    </div>
+    <div class="footlinks">
+      <a href="#top" data-scroll>Back to top</a>
+      <a href="#gallery" data-scroll>Gallery</a>
+      <a href="#contact" data-scroll>Contact</a>
+    </div>
+    <p class="copyline">2026 Nebula Scroll. All rights reserved.</p>
+  </footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
